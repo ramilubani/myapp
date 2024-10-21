@@ -9,11 +9,23 @@
 <body>
 
     @auth
-       <p>you are logged in</p>
+       <p>Congrats you are logged in</p>
        <form action="/logout" method="post">
         @csrf
         <button>logout</button>
     </form>
+
+    <div style="border: 3px solid black;">
+        <h2>Create a New Post</h2>
+        <form action="/create-post" method="post">
+            @csrf
+            <input type="text" name="Title" placeholder="post title">
+            <textarea name="body" placeholder="body content ..."></textarea>
+            <button>Save Post</button>
+        
+        
+        </form>
+    </div>    
             
     @else
     <div style="border: 3px solid black;">
@@ -25,6 +37,16 @@
         <input type="password" name="password" id="" placeholder="password">
         <button>Register</button>
     </form>
+    <div style="border: 3px solid black;">
+        <h2>Login</h2>
+    <form action="/login" method="post">
+        @csrf
+        <input type="text" name="loginname" id="" placeholder="name">
+        <input type="password" name="loginpassword" id="" placeholder="password">
+        <button>Log in</button>
+    </form>
+
+</div>     
 
 </div>     
     
