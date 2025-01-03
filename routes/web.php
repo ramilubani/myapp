@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,6 +9,4 @@ Route::get('/', function () {
 
 
 
-Route::post('/register', function () {
-    return "thanks for registering";
-});
+Route::post('/register', [UserController::class, 'register'] );
