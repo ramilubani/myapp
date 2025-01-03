@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-   <div>
+   <div style="border: 3px solid black;">
     <h2>Register</h2>
     <form action="">
         <input type="text" name="" placeholder="name">
