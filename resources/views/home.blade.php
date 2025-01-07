@@ -8,6 +8,10 @@
 <body>
     @auth
     <p>Congrats you are logged in !!!!</p>
+
+    <form action="/logout" method="post">
+        @csrf
+        <button>Logout</button>
     @else
     <div style="border: 3px solid black;">
         <h2>Register</h2>
