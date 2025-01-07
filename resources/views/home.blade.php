@@ -22,8 +22,11 @@
             <input type="password" name="password" placeholder="password">
             <button>Register</button>
         </form>
+    </div>
 
-        form action="/login" method="post">
+        <div style="border: 3px solid black;">
+            <h2>Login</h2>
+        <form action="/login" method="post">
         @csrf
             <input type="text" name="loginname" placeholder="name">
             <input type="password" name="loginpassword" placeholder="password">
