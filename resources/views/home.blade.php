@@ -22,6 +22,13 @@
             <input type="password" name="password" placeholder="password">
             <button>Register</button>
         </form>
+
+        form action="/login" method="post">
+        @csrf
+            <input type="text" name="loginname" placeholder="name">
+            <input type="password" name="loginpassword" placeholder="password">
+            <button>login</button>
+        </form>
        </div>
 
     @endauth
