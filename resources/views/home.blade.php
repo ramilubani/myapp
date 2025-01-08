@@ -95,6 +95,19 @@
                 @csrf
                 <button>Logout</button>
             </form>
+
+            <div class="form-container">
+                <h2>Create a New Post</h2>
+                <form action="/create-post" method="post">
+                    @csrf
+                    <input type="text" name="title" placeholder="Post Title" required>
+                    <textarea name="body" id="" cols="30" rows="10" placeholder="post title"></textarea>
+                    <button>Save Post</button>
+                </form>
+            </div>
+
+
+
         @else
             <div class="form-container">
                 <h2>Register</h2>
