@@ -30,32 +30,33 @@
 
         .container {
             width: 100%;
-            max-width: 600px; /* Increased container width */
-            padding: 30px; /* Increased padding */
+            max-width: 400px; /* Reduced max-width for a smaller layout */
+            padding: 20px;
             background-color: var(--secondary-color);
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
         h2 {
             color: var(--text-color);
-            font-size: 30px; /* Larger title font */
-            margin-bottom: 20px; /* Increased margin */
+            font-size: 24px; /* Slightly smaller title font */
+            margin-bottom: 15px;
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 20px; /* Increased gap between elements */
+            gap: 12px;
+            align-items: center; /* Center align form fields */
         }
 
         input {
-            width: 100%;
-            padding: 15px; /* Larger padding for input fields */
-            font-size: 18px; /* Larger font size */
+            width: 80%; /* Reduced width for smaller fields */
+            padding: 10px;
+            font-size: 14px; /* Smaller font size */
             border: 1px solid var(--border-color);
-            border-radius: 8px; /* Increased border radius */
+            border-radius: 5px;
             background-color: var(--input-bg);
             transition: border-color 0.2s ease;
         }
@@ -66,12 +67,13 @@
         }
 
         button {
-            padding: 15px; /* Larger button size */
-            font-size: 18px; /* Larger button text */
+            width: 80%; /* Same width as input fields */
+            padding: 12px; /* Reduced padding for compact buttons */
+            font-size: 16px;
             background-color: var(--primary-color);
             color: var(--secondary-color);
             border: none;
-            border-radius: 8px; /* Increased border radius */
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -81,7 +83,7 @@
         }
 
         .form-container {
-            margin-bottom: 30px; /* Increased margin between forms */
+            margin-bottom: 20px;
         }
     </style>
 </head>
