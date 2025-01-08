@@ -25,20 +25,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
         }
 
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 400px;
             padding: 20px;
             background-color: var(--secondary-color);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         h2 {
-            text-align: center;
             color: var(--text-color);
             font-size: 24px;
             margin-bottom: 15px;
@@ -47,30 +47,26 @@
         form {
             display: flex;
             flex-direction: column;
-            gap: 12px; /* Reduced gap for compact layout */
+            gap: 12px;
         }
 
-        input, textarea {
+        input {
             width: 100%;
-            padding: 8px; /* Smaller padding for compact fields */
-            font-size: 14px; /* Slightly smaller font size */
+            padding: 10px;
+            font-size: 14px;
             border: 1px solid var(--border-color);
             border-radius: 5px;
             background-color: var(--input-bg);
             transition: border-color 0.2s ease;
         }
 
-        input:focus, textarea:focus {
+        input:focus {
             border-color: var(--primary-color);
             outline: none;
         }
 
-        textarea {
-            resize: none; /* Disable resizing for a cleaner UI */
-        }
-
         button {
-            padding: 10px; /* Smaller button size */
+            padding: 10px;
             font-size: 14px;
             background-color: var(--primary-color);
             color: var(--secondary-color);
@@ -84,43 +80,19 @@
             background-color: var(--button-hover);
         }
 
-        .auth-container p {
-            text-align: center;
-            color: var(--text-color);
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
+        .form-container {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         @auth
-            <div class="auth-container">
-                <p>Welcome back! You are logged in.</p>
-
-                <form action="/logout" method="post">
-                    @csrf
-                    <button>Logout</button>
-                </form>
-            </div>
-
-            <div class="form-container">
-                <h2>Create a New Post</h2>
-                <form action="/create-post" method="post">
-                    @csrf
-                    <input type="text" name="title" placeholder="Post Title" required>
-                    <textarea name="body" placeholder="Write your content here..." rows="4" required></textarea>
-                    <button>Save Post</button>
-                </form>
-            </div>
+            <p>Welcome back! You are logged in.</p>
+            <form action="/logout" method="post">
+                @csrf
+                <button>Logout</button>
+            </form>
         @else
             <div class="form-container">
                 <h2>Register</h2>
