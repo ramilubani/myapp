@@ -41,19 +41,19 @@
             text-align: center;
             color: var(--text-color);
             font-size: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px; /* Reduced gap for compact layout */
         }
 
         input, textarea {
             width: 100%;
-            padding: 12px;
-            font-size: 16px;
+            padding: 8px; /* Smaller padding for compact fields */
+            font-size: 14px; /* Slightly smaller font size */
             border: 1px solid var(--border-color);
             border-radius: 5px;
             background-color: var(--input-bg);
@@ -65,9 +65,13 @@
             outline: none;
         }
 
+        textarea {
+            resize: none; /* Disable resizing for a cleaner UI */
+        }
+
         button {
-            padding: 12px;
-            font-size: 16px;
+            padding: 10px; /* Smaller button size */
+            font-size: 14px;
             background-color: var(--primary-color);
             color: var(--secondary-color);
             border: none;
@@ -113,7 +117,7 @@
                 <form action="/create-post" method="post">
                     @csrf
                     <input type="text" name="title" placeholder="Post Title" required>
-                    <textarea name="body" placeholder="Write your content here..." rows="5" required></textarea>
+                    <textarea name="body" placeholder="Write your content here..." rows="4" required></textarea>
                     <button>Save Post</button>
                 </form>
             </div>
